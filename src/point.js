@@ -154,6 +154,12 @@ export default class Point {
 
   //------------------------------------------------------------------------
 
+  /**
+   * Returns the distance between two points.
+   * @param {Point} a
+   * @param {Point} b
+   * @returns {number} the distance
+   */
   static distance(a, b) {
     if (!a || !b) {
       console.error("point.distance: a or b undefined");
@@ -348,7 +354,13 @@ export default class Point {
 
   //------------------------------------------------------------------------
 
-  //	Calcule l'intersection I d'une droite AB avec une horizontale Y.
+  /**
+   * Calcule l'intersection I d'une droite AB avec une horizontale Y.
+   * @param {Point} a
+   * @param {Point} b
+   * @param {nomber} y
+   * @returns map {result: true/false, pos: Point}
+   */
   static intersectsWithHorizontal(a, b, y) {
     const i = Point.fromPoint(a);
 
@@ -366,7 +378,13 @@ export default class Point {
     return { result: true, pos: i };
   }
 
-  //	Calcule l'intersection I d'une droite AB avec une verticale X.
+  /**
+   * Calcule l'intersection I d'une droite AB avec une verticale X.
+   * @param {Point} a
+   * @param {Point} b
+   * @param {nomber} y
+   * @returns map {result: true/false, pos: Point}
+   */
   static intersectsWithVertical(a, b, x) {
     const i = Point.fromPoint(a);
 
